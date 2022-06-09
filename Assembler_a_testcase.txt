@@ -1,0 +1,35 @@
+add $s1,$s2,$s3
+sub $s1,$s2,$s3
+addi $s1,$s2,20
+lw $s6, 16($s2)
+done2:
+	sw $s1, 20($s7)
+lh $t9, 20($zero)
+lhu $s1, 20($s3)
+sh $s5, 12($s2)
+lb $s1, 20($s7)
+done: lbu $s1, 4($t9)
+sb $t1, 24($t1)
+ll $s3, 20($t0)
+done1: sc $s1, 16($t3)
+jr $ra
+lui $s1, 20
+and $s1, $t2, $s4
+or $t1, $s4, $s2
+nor $a1, $s5, $s7
+andi $t1, $t9, 15
+ori $a0, $a1, 18
+sll $a2, $s2, 11
+j 0
+srl $a0, $t8, 19
+beq $s1,$s7, done
+bne $a3, $t3, 0
+jal done1
+slt $t3,$t2,$v0
+sltu $s1,$s2,$s7
+slti $t4,$s7,20
+sltiu $s1,$s2,24
+j done2
+
+
+
